@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Ceub - Perdeu seu Pet?</title>
+
+    <!-- Fontes e CSS base -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+    <!-- CSS Customizado para forçar leitura clara -->
+    <style>
+        body, .table, label, p, .form-control, .custom-select {
+            color: #5a5c69 !important; /* Cor escura padrão para textos */
+        }
+        small, .small, .text-muted {
+            color: #858796 !important; /* Cinza médio para textos pequenos */
+        }
+    </style>
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon">
+                     <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Marca-ceub-versao-positiva-lilas-1024x791.png?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original" width="100" height="80" alt="Logo Ceub">
+                </div>
+            </a>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Home (Cadastrar Pet)</span></a>
+            </li>
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">Interface</div>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Status</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Dados do Processo:</h6>
+                        <a class="collapse-item" href="acompanhar_progresso.html">Acompanhar Progresso</a>
+                        <a class="collapse-item" href="animais_perdidos.html">Listar Animais Perdidos</a>
+                    </div>
+                </div>
+            </li>
+            <hr class="sidebar-divider">
+        </ul>
+        <!-- End of Sidebar -->
+
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">William Ribeiro</span>
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg" alt="User Profile">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Conteúdo da Página -->
+                <div class="container-fluid">
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="card shadow mb-4">
+                            <main class="form-card container-fluid border rounded shadow-sm bg-white p-4">
+                                <h1 class="h3 mb-3 text-gray-900 font-weight-bold">Perdeu seu pet?</h1>
+                                <p class="mb-4">Preencha seus dados de contacto e as características do seu pet desaparecido para nos ajudar nas buscas. Campos marcados com <span class="text-danger font-weight-bold">*</span> são obrigatórios.</p>
+
+                                <form action="#" method="post" enctype="multipart/form-data">
+                                    <div class="row">
+                                        <!-- ESQUERDA: USUÁRIO -->
+                                        <div class="col-lg-5 col-md-12 mb-4 pr-lg-4">
+                                            <h5 class="mb-3 border-bottom pb-2 text-primary font-weight-bold"><i class="fas fa-user mr-2"></i>Seus Dados de Contacto</h5>
+                                            <div class="form-row">
+                                                <div class="form-group col-12">
+                                                    <label for="nome_tutor" class="font-weight-bold">Seu Nome <span class="text-danger">*</span></label>
+                                                    <input class="form-control" id="nome_tutor" name="nome_tutor" type="text" placeholder="Nome completo" required>
+                                                </div>
+                                                <div class="form-group col-12">
+                                                    <label for="telefone" class="font-weight-bold">Telefone / WhatsApp <span class="text-danger">*</span></label>
+                                                    <input class="form-control" id="telefone" name="telefone" type="tel" placeholder="(11) 91234-5678" required>
+                                                </div>
+                                                <div class="form-group col-12">
+                                                    <label for="email" class="font-weight-bold">Email <span class="text-danger">*</span></label>
+                                                    <input class="form-control" id="email" name="email" type="email" placeholder="nome@exemplo.com" required>
+                                                </div>
+                                                <div class="form-group col-12">
+                                                    <label for="cidade" class="font-weight-bold">Cidade / Estado <span class="text-danger">*</span></label>
+                                                    <input class="form-control" id="cidade" name="cidade" type="text" placeholder="Ex: São Paulo - SP" required>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- DIREITA: PET -->
+                                        <div class="col-lg-7 col-md-12 mb-4 pl-lg-4 border-left">
+                                            <h5 class="mb-3 border-bottom pb-2 text-primary font-weight-bold"><i class="fas fa-paw mr-2"></i>Características do Pet</h5>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="nome_pet" class="font-weight-bold">Nome do Pet</label>
+                                                    <input class="form-control" id="nome_pet" name="nome_pet" type="text" placeholder="Como ele atende?">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="especie" class="font-weight-bold">Espécie <span class="text-danger">*</span></label>
+                                                    <select class="custom-select" id="especie" name="especie" required>
+                                                        <option value="" selected>Escolha...</option>
+                                                        <option value="cachorro">Cachorro</option>
+                                                        <option value="gato">Gato</option>
+                                                        <option value="passaro">Pássaro</option>
+                                                        <option value="outro">Outro</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="raca" class="font-weight-bold">Raça</label>
+                                                    <input class="form-control" id="raca" name="raca" type="text" placeholder="Ex: Poodle, SRD, Siamês...">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="porte" class="font-weight-bold">Porte <span class="text-danger">*</span></label>
+                                                    <select class="custom-select" id="porte" name="porte" required>
+                                                        <option value="" selected>Escolha...</option>
+                                                        <option value="pequeno">Pequeno</option>
+                                                        <option value="medio">Médio</option>
+                                                        <option value="grande">Grande</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="cor" class="font-weight-bold">Cor Predominante <span class="text-danger">*</span></label>
+                                                    <input class="form-control" id="cor" name="cor" type="text" placeholder="Ex: Preto, Branco, Rajado..." required>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="data_desaparecimento" class="font-weight-bold">Data do sumiço <span class="text-danger">*</span></label>
+                                                    <input class="form-control" id="data_desaparecimento" name="data_desaparecimento" type="date" required>
+                                                </div>
+                                                <div class="form-group col-12">
+                                                    <label for="local_visto" class="font-weight-bold">Último local visto <span class="text-danger">*</span></label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text"><i class="fas fa-map-marker-alt text-danger"></i></span>
+                                                        </div>
+                                                        <input class="form-control" id="local_visto" name="local_visto" type="text" placeholder="Rua, Bairro ou Ponto de referência..." required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-12 mb-2">
+                                                    <label for="foto_pet" class="font-weight-bold">Foto do Pet</label>
+                                                    <div class="custom-file">
+                                                        <input type="file" class="custom-file-input" id="foto_pet" name="foto_pet" accept="image/*">
+                                                        <label class="custom-file-label" for="foto_pet" data-browse="Procurar">Escolher ficheiro</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-12 d-flex flex-wrap mt-2">
+                                                    <div class="custom-control custom-checkbox mr-4">
+                                                        <input type="checkbox" class="custom-control-input" id="usava_coleira" name="usava_coleira" value="sim">
+                                                        <label class="custom-control-label font-weight-bold" for="usava_coleira">Usava coleira</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="recompensa" name="recompensa" value="sim">
+                                                        <label class="custom-control-label font-weight-bold" for="recompensa">Ofereço recompensa</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 pt-3 border-top text-right">
+                                        <button class="btn btn-secondary px-4 mr-2" type="reset">Limpar</button>
+                                        <button class="btn btn-primary px-4 shadow-sm" type="submit">Cadastrar Pet Desaparecido</button>
+                                    </div>
+                                </form>
+                            </main>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Ceub 2026</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
